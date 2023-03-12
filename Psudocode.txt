@@ -1,0 +1,50 @@
+click start game
+    
+    after game is started
+
+/*
+start comAnwser;
+    random a number between 1 to 3
+        if number is 1 comAnwser is rock
+        if number is 2 comAnwser is paper
+        if number is 3 comAnwser is scissors
+        else tell error
+*/
+
+/*
+start userAnwser;
+    (have box) tell user to type in an anwser
+        if anwser is rock, userAnwser is rock
+        if anwser is paper, userAnwser is paper
+        if anwser is scissors, userAnwser is scissors
+        else tell error
+*/
+
+/*       
+result
+    if userAnwser is rock
+        if comAnwser is rock
+        tell Draw
+        if comAnwser is paper
+        tell you lose
+        if comAnwser is scissors
+        tell you win
+
+    if userAnwser is paper
+        if comAnwser is rock
+        tell you win
+        if comAnwser is paper
+        tell draw
+        if comAnwser is scissors
+        tell you you lose
+
+    if userAnwser is scissors
+        if comAnwser is rock
+        tell you lose
+        if comAnwser is paper
+        tell you you win
+        if comAnwser is scissors
+        tell you win draw
+
+    else tell error
+*/

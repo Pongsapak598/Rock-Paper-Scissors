@@ -1,0 +1,60 @@
+let num;
+
+function comStart() {
+    num = Math.floor(Math.random() * 3) + 1;
+}
+comStart();
+
+let comAnwser;
+
+if (num === 1) {
+    comAnwser = 'rock';
+} else if (num === 2) {
+    comAnwser = 'paper';
+} else if (num === 3) {
+    comAnwser = 'scissors';
+} else console.log('comStart Error');
+
+let userValue;
+
+function getValue() {
+    let container = document.getElementById("box").value;
+    userValue = container.toLowerCase();
+}
+
+let result;
+
+function process() {
+    if (userValue === 'rock') {
+        if (comAnwser === 'rock') {
+            result ='Draw!';
+        } else if (comAnwser === 'paper') {
+            result ='You lose!';
+        } else if (comAnwser === 'scissors') {
+            result ='You win!';
+        } else alert ('You must type Rock, Paper or Scissors!');
+
+    } else if (userValue === 'paper') {
+        if (comAnwser === 'rock') {
+            result ='You win!';
+        } else if (comAnwser === 'paper') {
+            result ='Draw!';
+        } else if (comAnwser === 'scissors') {
+            result ='You lose!';
+        } else alert ('You must type Rock, Paper or Scissors!');
+
+    } else if (userValue === 'scissors') {
+        if (comAnwser === 'rock') {
+            result ='You lose!';
+        } else if (comAnwser === 'paper') {
+            result ='You win!';
+        } else if (comAnwser === 'scissors') {
+            result ='Draw!';
+        } else alert ('You must type Rock, Paper or Scissors!');
+
+    } else result ='Internal process error'
+
+    if (typeof result === 'string') {
+        document.getElementById("show-anwser").innerHTML = `Computer said ${comAnwser} And you said ${userValue} ...${result}`;
+      } else document.getElementById("show-anwser").innerHTML = '';
+}
