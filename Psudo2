@@ -1,0 +1,65 @@
+range -1 - 10
+
+if i = 10
+    says countdown 10
+if i = 0 - 9
+    says 0 - 9
+if i = -1
+    says Blast off!
+
+i = 10;
+
+while i >= -1 {
+    if i = 10 {
+
+    }
+}
+
+
+
+
+let output = document.querySelector('.output');
+output.innerHTML = '';
+
+let i = 10;
+
+while (i >= 0) {
+  const para = document.createElement('p')
+	if (i === 10) {
+	  para.textContent = 'Starting countdown, 10';
+	} else (if i > 0) {
+	  para.textContent = `i`;
+	} else if (i === 0) {
+	  para.textContent = 'Blast off!'
+	} else para.textContent = 'error'
+
+  output.appendChild(para);
+  i--;
+}
+
+
+// const para = document.createElement('p');
+// para.textContent = ;
+// output.appendChild(para);
+
+const output = document.querySelector('.output');
+output.innerHTML = '';
+
+let i = 10;
+
+while (i >= 0) {
+  const para = document.createElement('p');
+	if (i === 10) {
+	  para.textContent = 'Starting countdown, 10';
+	} else if (i === 0) {
+	  para.textContent = 'Blast off!';
+	} else para.textContent = i;
+
+  output.appendChild(para);
+  i--;
+}
+
+
+// const para = document.createElement('p');
+// para.textContent = ;
+// output.appendChild(para);

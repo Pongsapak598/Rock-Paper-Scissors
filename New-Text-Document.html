@@ -5,16 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-  <label for="anwser-box">Type your anwser (Rock, Paper, Scissors)</label>
+  <label for="answer-box">Type your answer 
+  (Rock, Paper, Scissors)</label>
   <div>
     <input type="text" id="box">
-    <button onclick="getValue(); process();">Submit</button>
+    <button id="summitButton" onclick="comStart(); getValue(); process(); showResult();">Submit</button>
   </div>
-  <p id="show-anwser"></p>
+  <p id="show-answer"></p>
   
 </body>
 </html>
