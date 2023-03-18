@@ -9,12 +9,12 @@
 </head>
 <body>
 
-  <label for="answer-box">Type your answer 
-  (Rock, Paper, Scissors)</label>
+  <label for="answer-box">Choose your weapon!</label>
   <div>
-    <input type="text" id="box" onfocus="this.value=''" value="Insert your answer!" maxlength="10">
-    <button id="summitButton" onclick="comStart(); getValue(); process(); showResult(); 
-    countPoint();">Submit</button>
+    <button id="value-button" value="Rock" onclick="comStart(); getValue(this.value); process(); showResult(); countPoint();">Rock</button>
+    <button id="value-button" value="Paper" onclick="comStart(); getValue(this.value); process(); showResult(); countPoint();">Paper</button>
+    <button id="value-button" value="Scissors" onclick="comStart(); getValue(this.value); process(); showResult(); countPoint();">Scissors</button>
+    
   </div>
   <p id="show-answer"></p>
   <p id="show-point"></p>
