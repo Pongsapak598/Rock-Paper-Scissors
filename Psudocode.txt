@@ -48,3 +48,37 @@ result
 
     else tell error
 */
+
+let playerPoint
+let comPoint
+
+function countPoint() {
+    if (result === 'You win!') {
+        playerPoint ++;
+    } if (result === 'You lose!') {
+        comPoint ++;
+    } else {
+        return;
+    }
+}
+
+//Add a new line in HTML
+
+function whoWin() {
+    if (playerPoint === '5') {
+        document.getElementById("show-answer").innerHTML = "You're survived!";
+        reset();
+    } if (comPoint === '5') {
+        document.getElementById("show-answer").innerHTML = "You're dead!";
+        reset();
+    }
+}
+
+fucntion reset() {
+    num = '';
+    comAnswer = '';
+    userValue = '';
+    result = '';
+    playerPoint = '';
+    comPoint = '';
+}

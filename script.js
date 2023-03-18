@@ -49,11 +49,63 @@ function process() {
             result ='Draw!';
         } else alert ('You must type Rock, Paper or Scissors!');
 
-    } else result ="Your answer doesn't seem right..."
+    } else {
+        result ="Your answer doesn't seem right..."
+        comAnswer = '';
+    }
 }
 
 function showResult() {
 if (typeof result === 'string') {
     document.getElementById("show-answer").innerHTML = `Computer: ${comAnswer}<br />You: ${userValue}<br /><br />...${result}`;
   } else document.getElementById("show-answer").innerHTML = '';
+}
+
+let playerPoint = 0;
+let comPoint = 0;
+let Button = document.getElementById('summitButton');
+
+function whoWin() {
+    if (playerPoint === 5) {
+        document.getElementById("show-dead").innerHTML = "You're survived!";
+        freezeGame();
+    } else if (comPoint === 5) {
+        document.getElementById("show-dead").innerHTML = "You're dead!";
+        freezeGame();
+    } else {
+        document.getElementById("show-dead").innerHTML = "";
+    }
+}
+
+function freezeGame() {
+    Button.disabled = true;
+}
+
+function countPoint() {
+    if (result === 'You win!') {
+        playerPoint ++;
+        document.getElementById("show-point").innerHTML = `Point<br />Player: ${playerPoint}<br />Com: ${comPoint}`;
+        whoWin();
+    } else if (result === 'You lose!') {
+        comPoint ++;
+        document.getElementById("show-point").innerHTML = `Point<br />Player: ${playerPoint}<br />Com: ${comPoint}`;
+        whoWin();
+    } else {
+        document.getElementById("show-point").innerHTML = `Point<br />Player: ${playerPoint}<br />Com: ${comPoint}`;
+        whoWin();
+    }
+}
+
+function reset() {
+    num = '';
+    comAnswer = '';
+    userValue = '';
+    result = '';
+    playerPoint = 0;
+    comPoint = 0;
+    document.getElementById('box').value = '';
+    document.getElementById("show-answer").innerHTML = '';
+    document.getElementById("show-point").innerHTML = '';
+    document.getElementById("show-dead").innerHTML = "";
+    Button.disabled = false;
 }

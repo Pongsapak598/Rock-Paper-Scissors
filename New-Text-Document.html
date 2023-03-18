@@ -12,10 +12,15 @@
   <label for="answer-box">Type your answer 
   (Rock, Paper, Scissors)</label>
   <div>
-    <input type="text" id="box">
-    <button id="summitButton" onclick="comStart(); getValue(); process(); showResult();">Submit</button>
+    <input type="text" id="box" onfocus="this.value=''" value="Insert your answer!" maxlength="10">
+    <button id="summitButton" onclick="comStart(); getValue(); process(); showResult(); 
+    countPoint();">Submit</button>
   </div>
   <p id="show-answer"></p>
+  <p id="show-point"></p>
+  <p id="show-dead"></p>
+
+  <button id="resetButton" onclick=reset()>Reset</button>
   
 </body>
 </html>
